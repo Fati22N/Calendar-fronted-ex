@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <!-- links for bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="Style.css">
+<style>
+ 
+</style>
+</head>
+<body>
+  <div class="container-fluid text-center  bx-0 px-0 mx-0">
+    <!-- Content for header section -->
+    <section class="header">
+        <!-- right-header -->
+      <div class="right-header">
+        <!-- three line Icon -->
+        <div class="three-line">
+            <button type="button" class="three-line-btn btn btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+        </div>
+        <!-- calendar and icon -->
+        <div class="calendar-right">
+            <span class="calendar" aria-label="calendar">
+                <img class="cal-icon" src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_24_2x.png" srcset="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_24_2x.png 1x, https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_24_2x.png 2x " alt="" aria-hidden="true" role="presentation" style="width:40px;height:40px">
+                <span class="cal" aria-level="1" role="heading">Calendar</span>
+            </span>
+        </div>
+      </div>
+      <!-- center-header -->
+      <div class="center-header">
+        <div class="main-date">
+            <div class="date-button">
+              <!-- center-right buttons -->
+                <div class="button-next-previous">
+                    <span>
+                        <button type="button" class="btn-today btn btn-outline-secondary">Today</button>
+                    </span>
+                    <span>
+                        <button type="button" class="btn-left-arrow btn btn-outline-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/></svg>
+                        </button>
+                    </span>
+                    <span>
+                        <button type="button" class="btn-right-arrow btn btn-outline-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>
+                        </button>
+                    </span>
+                </div>
+                <div class="large-date" style="display: flex; align-items:center"><div class="month-date1">
+                    <span class="date1">April 2024</span>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- blank-header  -->
+      <div class="blank"></div>
+      <!-- center-left header -->
+      <div class="left-main">
+        <div class="search-engine">
+            <span data-is-tooltip-wrapper="true">
+                <button type="button" class="btn-search-engine btn btn-outline-secondary"aria-label="search" data-is-tooltip-enable="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+                </button>
+            </span>
+        </div>
+        <div class="space1" data-anchor-corner="3" data-popup-corner="2">
+            <span role="presentation"></span>
+        </div>
+        <div class="information" data-anchor-corner="3" data-popup-corner="2">
+            <span data-is-tooltip-wrapper="true">
+                <button type="button" class="btn-info-engine btn btn-outline-secondary"aria-label="search" data-is-tooltip-enable="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                  </svg>
+                </button>
+            </span>
+        </div>
+        <div class="setting-engine">
+            <span data-is-tooltip-wrapper="true">
+                <button type="button" class="btn-setting-engine btn btn-outline-secondary"aria-label="search" data-is-tooltip-enable="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+                      </svg>
+                </button>
+            </span>
+        </div>
+        <div class="drop-down-time">
+            <span data-is-tooltip-wrapper="true">
+                <button type="button" class="btn-dropdown btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Week
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Day</a></li>
+                    <li><a class="dropdown-item" href="#">Week</a></li>
+                    <li><a class="dropdown-item" href="#">Month</a></li>
+                    <li><a class="dropdown-item" href="#">Year</a></li>
+                    <li><a class="dropdown-item" href="#">Schedule</a></li>
+                    <li><a class="dropdown-item" href="#">4 days</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                      </svg> Show Weekends</a></li>
+                    <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                      </svg> Show Declined Events</a></li>
+                    <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                      </svg> Show Completed Tasks</a></li>
+                    <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                      </svg> Show Appointment Schedules</a></li>
+                </ul>
+            </span>
+        </div>
+        <!-- cal-check-icon -->
+      <div class="cal-check-icon ml-2 cal-check-btn" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group" role="group" aria-label="First group">
+          <button type="button" class="btn btn-outline-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+              </svg>
+            </button>
+          <button type="button" class="btn btn-outline-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                  <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+              </svg>
+          </button>
+        </div>
+      </div>
+
+      </div>
+      <!-- left-header -->
+      <div class="left-header">
+          <div class="google-link text-center">
+          <button type="button" class="google-link-btn btn btn-outline-light" aria-label="Google apps" href="https://www.google.com/intl/en/about/products?tab=ch" aria-expanded="false" role="button" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM2 8a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM2 13a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z" fill="#808080"/> 
+            </svg>
+          </button>
+        </div>
+        <div class="user1">
+        <a class="user-id" aria-label="Google Account: F Naqavi (f.h.naqavi@gmail.com)" href="https://accounts.google.com/SignOutOptions?hl=en&amp;continue=https://calendar.google.com/calendar/u/0/r&amp;service=cl&amp;ec=GBRAGA" tabindex="0" role="button" aria-expanded="false">
+        <img class="user" src="https://lh3.googleusercontent.com/ogw/AF2bZyhU40HPfr3gcICt-gKrXjZgTmVRkV5g7fNXX1vzJP9KVg=s32-c-mo" srcset="https://lh3.googleusercontent.com/ogw/AF2bZyhU40HPfr3gcICt-gKrXjZgTmVRkV5g7fNXX1vzJP9KVg=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/AF2bZyhU40HPfr3gcICt-gKrXjZgTmVRkV5g7fNXX1vzJP9KVg=s64-c-mo 2x " alt="" aria-hidden="true" data-noaft="">
+        </a>
+      </div>
+        
+      </div>
+    </section>
+    <!-- Content for main section -->
+    <section class="main">
+        <div class="row">
+          <div class="col-2">
+            <!-- left-up navbar -->
+            <div class="event-col">
+              <!-- create-btn  -->
+              <div class="create-btn btn-group">
+                <button type="button" class="btn-create btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="plus">
+                    <div>
+                  <svg width="36" height="36" viewBox="0 0 36 36"><path fill="#34A853" d="M16 16v14h4V20z"></path>
+                    <path fill="#4285F4" d="M30 16H20l-4 4h14z"></path><path fill="#FBBC05" d="M6 16v4h10l4-4z"></path>
+                    <path fill="#EA4335" d="M20 16V6h-4v14z"></path><path fill="none" d="M0 0h36v36H0z"></path>
+                  </svg>
+                </div>
+                </span>
+                  <div class="create">Create</div>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Event</a></li>
+                  <li><a class="dropdown-item" href="#">Task</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Left-Little calendar -->
+            <div class="little-cal">
+              <div class="heading-l-cal">
+                <span class="date-l-cal"><b>April 2024</b></span>
+                <!-- next & previous month for little-cal -->
+                <div class="np-l-cal">
+                  <!-- previous  -->
+                  <div class="p-l-cal">
+                    <button type="button" class="p-l-cal-btn btn btn-outline-secondary"><svg xmlns="http://www.w3.org/2000/svg" 
+                      width="12" height="12" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                      <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                    </button>
+                  </div>
+                  <!-- next  -->
+                  <div class="n-l-cal">
+                    <button type="button" class="n-l-cal-btn btn btn-outline-secondary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                  </button>
+                  </div>
+                </div>
+              </div>
+              <!-- little-cal -->
+              <div class="main-l-cal" role="grid" aria-readonly="true" aria-label="April 2024">
+                <div>
+                  <div class="row-l-cal" role="row">
+                  <span role="columnheader" aria-readonly="true" aria-label="Sunday" class="day-l-cal"  data-text="Sunday" data-tooltip-position="bottom" data-tooltip-vertical-offset="0" data-tooltip-horizontal-offset="0" data-tooltip-only-if-necessary="false">
+                    <span aria-hidden="true">S</span>
+                    <span class="days-l-cal1">Sunday</span>
+                  </span>
+                  <span role="columnheader" aria-readonly="true" aria-label="Monday" class="day-l-cal"  data-text="Monday" data-tooltip-position="bottom" data-tooltip-vertical-offset="0" data-tooltip-horizontal-offset="0" data-tooltip-only-if-necessary="false">
+                      <span aria-hidden="true">M</span>
+                      <span class="days-l-cal1">Monday</span>
+                  </span>
+                    <span role="columnheader" aria-readonly="true" aria-label="Tuesday" class="day-l-cal"  data-text="Tuesday" data-tooltip-position="bottom" data-tooltip-vertical-offset="0" data-tooltip-horizontal-offset="0" data-tooltip-only-if-necessary="false">
+                        <span aria-hidden="true">T</span>
+                        <span class="days-l-cal1">Tuesday</span>
+                    </span>
+                      <span role="columnheader" aria-readonly="true" aria-label="Wednesday" class="day-l-cal"  data-text="Wednesday" data-tooltip-position="bottom" data-tooltip-vertical-offset="0" data-tooltip-horizontal-offset="0" data-tooltip-only-if-necessary="false">
+                          <span aria-hidden="true">W</span>
+                          <span class="days-l-cal1">Wednesday</span>
+                      </span>
+                        <span role="columnheader" aria-readonly="true" aria-label="Thursday" class="day-l-cal"  data-text="Thursday" data-tooltip-position="bottom" data-tooltip-vertical-offset="0" data-tooltip-horizontal-offset="0" data-tooltip-only-if-necessary="false">
+                            <span aria-hidden="true">T</span>
+                            <span class="days-l-cal1">Thursday</span>
+                        </span>
+                          <span role="columnheader" aria-readonly="true" aria-label="Friday" class="day-l-cal"  data-text="Friday" data-tooltip-position="bottom" data-tooltip-vertical-offset="0" data-tooltip-horizontal-offset="0" data-tooltip-only-if-necessary="false">
+                              <span aria-hidden="true">F</span>
+                              <span class="days-l-cal1">Friday</span>
+                          </span>
+                            <span role="columnheader" aria-readonly="true" aria-label="Saturday" class="day-l-cal"  data-text="Saturday" data-tooltip-position="bottom" data-tooltip-vertical-offset="0" data-tooltip-horizontal-offset="0" data-tooltip-only-if-necessary="false">
+                                <span aria-hidden="true">S</span>
+                                <span class="days-l-cal1">Saturday</span>
+                            </span>
+                    </div>
+                </div>
+                <div class="row-group-l-cal" role="rowgroup">
+                  <div role="row" class="firstr-l-cal">
+                    <span class="first-rows-l-cal1 " data-grid-cell="true" data-dragsource-type="13" data-date="20240331" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false">
+                      <div class="daynumber-f-l-cal " aria-label="March 31">31</div>
+                    </span>
+                    <span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240401" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false">
+                      <div class="daynumber-f-l-cal " aria-label="1">1</div>
+                    </span>
+                    <span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240402" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false">
+                      <div class="daynumber-f-l-cal " aria-label="2">2</div>
+                    </span>
+                    <span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240403" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false">
+                      <div class="daynumber-f-l-cal " aria-label="3">3</div>
+                    </span>
+                    <span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240404" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false">
+                      <div class="daynumber-f-l-cal " aria-label="4">4</div>
+                    </span>
+                    <span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240405" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false">
+                      <div class="daynumber-f-l-cal " aria-label="5">5</div>
+                    </span>
+                    <span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240406" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false">
+                      <div class="daynumber-f-l-cal " aria-label="6">6</div>
+                    </span>
+                  </div>
+                  <div role="row" class="firstr-l-cal"><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240407" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="7">7</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240408" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="8">8</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240409" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="9">9</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240410" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="10">10</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240411" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="11">11</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240412" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="12">12</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240413" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="13">13</div></span></div>
+                  <div role="row" class="firstr-l-cal"><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240414" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="14">14</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240415" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="15">15</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240416" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="16">16</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240417" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="17">17</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240418" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="18">18</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240419" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="19">19</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240420" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="20">20</div></span></div>
+                  <div role="row" class="firstr-l-cal"><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240421" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="21">21</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240422" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="22">22</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240423" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="23">23</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240424" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="24">24</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240425" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="25">25</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240426" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="26">26</div></span><span class="IOneve Io4vne EH-cal EHC-DaY83b-ppHlrf pWJCO Ic3tg c1VYmf p6vobf Aibntc P7rTif S3hgjf" data-grid-cell="true" data-dragsource-type="13" data-date="20240427" data-opens-day-overview="undefined" role="gridcell" aria-selected="true" tabindex="0" data-focusable="true"><div class="daynumber-f-l-cal " aria-label="27, today">27</div></span></div>
+                  <div role="row" class="firstr-l-cal"><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240428" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="28">28</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240429" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="29">29</div></span><span class="first-rows-l-cal" data-grid-cell="true" data-dragsource-type="13" data-date="20240430" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="30">30</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240501" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 1">1</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240502" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 2">2</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240503" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 3">3</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240504" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 4">4</div></span></div>
+                  <div role="row" class="firstr-l-cal"><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240505" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 5">5</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240506" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 6">6</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240507" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 7">7</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240508" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 8">8</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240509" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 9">9</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240510" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 10">10</div></span><span class="first-rows-l-cal1" data-grid-cell="true" data-dragsource-type="13" data-date="20240511" data-opens-day-overview="undefined" role="gridcell" aria-selected="false" tabindex="-1" data-focusable="false"><div class="daynumber-f-l-cal " aria-label="May 11">11</div></span></div>
+
+                </div>
+              </div>
+            </div>
+            <!-- search people -->
+              <div class="search-people" role="search" tabindex="-1">
+                <div class="top-sp" data-show-remove-button="true" data-remove-button-label="Clear Search" data-contact-chip-style="1">
+                  <div class="in-top-sp" role="listbox" aria-label="Selected people"></div>
+                </div>
+                <div class="bottom-sp">
+                  <span hidden="" data-unique-tt-id="ucj-3"></span>
+                  <div class="in-bottom-sp" aria-describedby="ucj-3" data-tooltip-classes="PNunD">
+                    <span data-is-tooltip-wrapper="true">
+                      <div class="inside-sp">
+                        <label class="in-inside-sp" for="i21">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                          </svg>
+                          <input type="text" class="input-sp" role="combobox" placeholder="Search for people" aria-label="Search for people" aria-haspopup="true" aria-expanded="false">
+                        </label>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- accordin-left   -->
+              <div class="accordion accordion-flush" id="accordin-left1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      My Calendar
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordin-left1">
+                    <div class="accordion-body">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">My Cal</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">Tasks</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">Birthdays</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header d-flex justify-content-between align-items-center" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Other Calendars
+                    </button>
+                    <button class="btn btn-light" type="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordin-left1">
+                    <div class="accordion-body">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">Holidays</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+                 
+            </div>
+          <div class="col-9 custom-col-9-5 px-0">
+              <!-- Horizontal Row -->
+              <div class="row mx-0 px-0"> 
+                <div class="Horizontal-Row col-1 px-0">
+                  <div class="headline-cal" role="presentation">
+                    <div class="headline-cal-up" role="row">
+                      <div class="pkg-column-cal" role="presentation">
+                        <div class="header-cal" role="columnheader" aria-readonly="true" tabindex="-1" data-dragsource-type="8">
+                          <h2 class="days-cal" aria-label="Sunday, April 28">
+                            <div aria-hidden="true" class="sumery-day li-day-cal f-day-cal">Sun</div>
+                            <div class="sumery-day number-cal n-cal f-day-cal" aria-label="Sunday, April 28" tabindex="0"  role="link" 
+                            data-datekey="27804" data-dragsource-ignore="true">28</div></h2>
+                        </div>
+                        <div class="header-cal" role="columnheader" aria-readonly="true" tabindex="-1" data-dragsource-type="8">
+                          <h2 class="days-cal" aria-label="Monday, April 29, today">
+                            <div aria-hidden="true" class="sumery-day li-day-cal s-day-cal">Mon</div>
+                            <div  class="sumery-day number-cal n-cal s-day-cal" aria-label="Monday, April 29, today" tabindex="0" role="link" 
+                            data-datekey="27805" data-dragsource-ignore="true">29</div></h2>
+                        </div>
+                        <div class="header-cal" role="columnheader" aria-readonly="true" tabindex="-1" data-dragsource-type="8">
+                          <h2 class="days-cal" aria-label="Tuesday, April 30">
+                            <div aria-hidden="true" class="sumery-day li-day-cal r-day-cal">Tue</div>
+                            <div  class="sumery-day number-cal n-cal r-day-cal" aria-label="Tuesday, April 30" tabindex="0" role="link" 
+                            data-datekey="27806" data-dragsource-ignore="true">30</div></h2>
+                        </div>
+                        <div class="header-cal" role="columnheader" aria-readonly="true" tabindex="-1" data-dragsource-type="8">
+                          <h2 class="days-cal" aria-label="Wednesday, May 1">
+                            <div aria-hidden="true" class="sumery-day li-day-cal r-day-cal">Wed</div>
+                            <div  class="sumery-day number-cal n-cal r-day-cal" aria-label="Wednesday, May 1" tabindex="0" role="link" 
+                            data-datekey="27809" data-dragsource-ignore="true">1</div></h2>
+                        </div>
+                        <div class="header-cal" role="columnheader" aria-readonly="true" tabindex="-1" data-dragsource-type="8">
+                          <h2 class="days-cal" aria-label="Thursday, May 2">
+                            <div aria-hidden="true" class="sumery-day li-day-cal r-day-cal">Thu</div>
+                            <div  class="sumery-day number-cal n-cal r-day-cal" aria-label="Thursday, May 2" tabindex="0" role="link" 
+                            data-datekey="27810" data-dragsource-ignore="true">2</div></h2>
+                        </div>
+                        <div class="header-cal" role="columnheader" aria-readonly="true" tabindex="-1" data-dragsource-type="8">
+                          <h2 class="days-cal" aria-label="Friday, May 3">
+                            <div aria-hidden="true" class="sumery-day li-day-cal r-day-cal">Fri</div>
+                            <div  class="sumery-day number-cal n-cal r-day-cal" aria-label="Friday, May 3" tabindex="0" role="link" 
+                            data-datekey="27811" data-dragsource-ignore="true">3</div></h2>
+                        </div>
+                        <div class="header-cal" role="columnheader" aria-readonly="true" tabindex="-1" data-dragsource-type="8">
+                          <h2 class="days-cal" aria-label="Saturday, May 4">
+                            <div aria-hidden="true" class="sumery-day li-day-cal r-day-cal">Sat</div>
+                            <div  class="sumery-day number-cal n-cal r-day-cal" aria-label="Saturday, May 4" tabindex="0" role="link" 
+                            data-datekey="27812" data-dragsource-ignore="true">4</div></h2>
+                        </div>
+                        <div class="corner-right-cal">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="headline-cal-down" role="row" aria-hidden="false" style="max-height: 3em;">
+                      <div role="presentation" class="HCD">
+                        <ul aria-hidden="true" class="HCD-list">
+                      <li class="list-headline-cal" data-datekey="27804"></li>
+                      <li class="list-headline-cal F262Ye" data-datekey="27805"></li>
+                      <li class="list-headline-cal" data-datekey="27806"></li>
+                      <li class="list-headline-cal" data-datekey="27809"></li>
+                      <li class="list-headline-cal" data-datekey="27810"></li>
+                      <li class="list-headline-cal" data-datekey="27811"></li>
+                      <li class="list-headline-cal" data-datekey="27812"></li>
+                    </ul>
+                    <div role="presentation" data-dragsource-type="8" class="Events-headline-cal EH-cal enpite" style="height: 1em;">
+                      <div role="gridcell" class="Grid-cell-cal" aria-labelledby="c937" tabindex="-1">
+                        <h2 class="Grid-H-cal GHC" id="c937">No all day events, Sunday, April 28</h2>
+                      </div>
+                      <div role="gridcell" class="Grid-cell-cal" aria-labelledby="c938" tabindex="-1">
+                        <h2 class="Grid-H-cal GHC" id="c938">No all day events, Monday, April 29, today</h2>
+                      </div>
+                      <div role="gridcell" class="Grid-cell-cal" aria-labelledby="c939" tabindex="-1">
+                        <h2 class="Grid-H-cal GHC" id="c939">No all day events, Tuesday, April 30</h2>
+                      </div>
+                      <div role="gridcell" class="Grid-cell-cal" aria-labelledby="c940" tabindex="-1">
+                        <h2 class="Grid-H-cal GHC" id="c940">1 all day event, Wednesday, May 1</h2>
+                        <div role="presentation">
+                          <div data-eventchip="" data-opens-details="true" data-stacked-layout-chip-container="true" data-eventid="MjAyNDA1MDFfMHRhanI2djR2bjQ1YTRuNzdha21nOGthODggZW4udXNhI2hvbGlkYXlAdg" 
+                          data-keyboardactiontype="0;1" class="EH-cal" data-dragsource-type="9" style="left: 42.86%; width: 14.29%; top: 0em; border-color: rgb(11, 128, 67);">
+                            <div role="button" data-stacked-layout-chip="true" class="sth" tabindex="0" style="background-color: rgb(11, 128, 67);">
+                              <span aria-hidden="true" class="r2fd">
+                                <span class="rda">First Day of Asian Pacific American Heritage Month</span></span>
+                                <span class="GHC">All day, First Day of Asian Pacific American Heritage Month, Calendar: Holidays in United States, May 1, 2024</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div role="gridcell" class="Grid-cell-cal" aria-labelledby="c941" tabindex="-1">
+                          <h2 class="Grid-H-cal GHC" id="c941">No all day events, Thursday, May 2</h2>
+                        </div>
+                        <div role="gridcell" class="Grid-cell-cal" aria-labelledby="c942" tabindex="-1">
+                          <h2 class="Grid-H-cal GHC" id="c942">No all day events, Friday, May 3</h2>
+                        </div>
+                        <div role="gridcell" class="Grid-cell-cal" aria-labelledby="c943" tabindex="-1">
+                          <h2 class="Grid-H-cal GHC" id="c943">No all day events, Saturday, May 4</h2></div></div></div></div>
+                    <div class="time-zone">
+                      <div class="TZ GMT TzA9Ye">
+                        <div class="AM-PM">GMT-04</div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              <div class="row mx-0 px-0">
+                <div class="main-calendar px-0" >
+                  <div role="presentation" data-type="1" data-start-date-key="27804" data-end-date-key="27812" class="left-cal">
+                    <div tabindex="-1" role="presentation" class="l-c">
+                      <div aria-hidden="true" tabindex="-1" class="left-main-cal">
+                        <div class="LeCal">
+                          <div class="LefCal">
+                            <span class="l-cal-AM l-cal-PM">12 AM</span></div>
+                            <div class="LefCal ">
+                              <span class="l-cal-AM l-cal-PM">1 AM</span></div>
+                              <div class="LefCal ">
+                                <span class="l-cal-AM l-cal-PM">2 AM</span></div>
+                                <div class="LefCal ">
+                                  <span class="l-cal-AM l-cal-PM">3 AM</span></div>
+                                  <div class="LefCal ">
+                                    <span class="l-cal-AM l-cal-PM">4 AM</span></div>
+                                    <div class="LefCal ">
+                                      <span class="l-cal-AM l-cal-PM">5 AM</span></div>
+                                      <div class="LefCal ">
+                                        <span class="l-cal-AM l-cal-PM">6 AM</span></div>
+                                        <div class="LefCal ">
+                                          <span class="l-cal-AM l-cal-PM">7 AM</span></div>
+                                          <div class="LefCal ">
+                                            <span class="l-cal-AM l-cal-PM">8 AM</span></div>
+                                            <div class="LefCal ">
+                                              <span class="l-cal-AM l-cal-PM">9 AM</span></div>
+                                              <div class="LefCal ">
+                                                <span class="l-cal-AM l-cal-PM">10 AM</span></div>
+                                                <div class="LefCal ">
+                                                  <span class="l-cal-AM l-cal-PM">11 AM</span></div>
+                                                  <div class="LefCal ">
+                                                    <span class="l-cal-AM l-cal-PM">12 PM</span></div>
+                                                    <div class="LefCal ">
+                                                      <span class="l-cal-AM l-cal-PM">1 PM</span></div>
+                                                      <div class="LefCal ">
+                                                        <span class="l-cal-AM l-cal-PM">2 PM</span></div>
+                                                        <div class="LefCal ">
+                                                          <span class="l-cal-AM l-cal-PM">3 PM</span></div>
+                                                          <div class="LefCal ">
+                                                            <span class="l-cal-AM l-cal-PM">4 PM</span></div>
+                                                            <div class="LefCal ">
+                                                              <span class="l-cal-AM l-cal-PM">5 PM</span></div>
+                                                              <div class="LefCal ">
+                                                                <span class="l-cal-AM l-cal-PM">6 PM</span></div>
+                                                                <div class="LefCal ">
+                                                                  <span class="l-cal-AM l-cal-PM">7 PM</span></div>
+                                                                  <div class="LefCal ">
+                                                                    <span class="l-cal-AM l-cal-PM">8 PM</span></div>
+                                                                    <div class="LefCal ">
+                                                                      <span class="l-cal-AM l-cal-PM">9 PM</span></div>
+                                                                      <div class="LefCal ">
+                                                                        <span class="l-cal-AM l-cal-PM">10 PM</span></div>
+                                                                        <div class="LefCal ">
+                                                                          <span class="l-cal-AM l-cal-PM">11 PM</span></div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <table role="presentation" class="MCD table table-bordered mx-0" tabindex="-1" >
+                                                                        <tbody>
+                                                                          <tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr><tr>
+                                                                            <td></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+                                                                            <td scope="col"></td>
+
+                                                                          </tr>
+                                                                          
+                                                                        </tbody>
+                                                                      </table>
+                                                                    
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+          <div class=" right-main col-1 custom-col-1-5 row px-0 mx-0">
+                                                        <div class="right-main-up">
+                                                          <div> 
+                                                            <button type="button" class="lamp btn btn-outline-warning ">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                                                            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>
+                                                          </svg>
+                                                        </button>
+                                                        </div>
+
+                                                          <div><button type="button" class="checkbox-right-main btn btn-outline-info ">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                                                              <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                                                              <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                                                            </svg>
+                                                        </button></div>
+
+                                                          <div><button type="button" class="person-right-main btn btn-outline-primary ">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                                            </svg>
+                                                        </button></div>
+
+                                                          <div><button type="button" class="location-right-main btn btn-light" style="height:38px ; width:42px; ">
+                                                            <img src="https://www.gstatic.com/companion/icon_assets/maps_v2_2x.png" alt="location" style="height:20px ; width:20px; display:flex; align-items:center;">
+                                                        </button></div>
+
+                                                        </div>
+                                                      </div>
+                                                    </div>
+
+                                                    </div>
+          
+                                                  </section>
+                                                </div>
+
+                                              </body>
+                                              
+                                            </html>
